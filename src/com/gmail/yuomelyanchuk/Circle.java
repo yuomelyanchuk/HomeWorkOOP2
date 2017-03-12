@@ -4,15 +4,31 @@ public class Circle extends Shape {
 	private Point centr = new Point();
 	private double radius;
 
-	public Circle(Point centr, double radius) throws Exception {
+	public Circle(Point centr, double radius) {
 		super();
-		if (radius > 0) {
-			this.centr = centr;
-			this.radius = radius;
-		}
-		else{
-			throw new Exception("radius must be greater than 0");
-		}
+		this.centr = centr;
+		this.radius = radius;
+		testCircle();
+
+	}
+
+	public Circle() {
+		super();
+
+	}
+
+	public void setCentr(Point centr) {
+		this.centr = centr;
+	}
+
+	public void setRadius(double radius) {
+		this.radius = radius;
+		testCircle();
+	}
+
+	private void testCircle() throws IllegalArgumentException {
+		if (this.radius < 0)
+			throw new IllegalArgumentException("radius must be greater than 0");
 	}
 
 	@Override

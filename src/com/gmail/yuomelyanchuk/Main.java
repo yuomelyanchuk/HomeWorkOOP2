@@ -19,7 +19,8 @@ public class Main {
 			Square sq = new Square(a, b, c, d);
 			System.out.println(sq.getPerimetr());
 
-			Table tbl = new Table(4);
+			Table tbl = new Table();
+			tbl.setTblSize(4);
 
 			tbl.setShapeOnPosition(tr, 1);
 			System.out.println(tbl.getTableInfo());
@@ -35,7 +36,7 @@ public class Main {
 
 			tbl.setShapeOnPosition(sq, 0);
 
-		} catch (Exception e) {
+		} catch (IllegalArgumentException e) {
 			System.out.println(e.getMessage());
 
 		}

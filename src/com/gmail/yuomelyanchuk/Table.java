@@ -3,34 +3,33 @@ package com.gmail.yuomelyanchuk;
 public class Table {
 	private Shape[] tbl;
 
-	public Table(int size) throws Exception {
+	public Table()  {
 		super();
-		if (size < 1) {
-			throw new Exception("invalid size");
-		} else {
-			this.tbl = new Shape[size];
+	}		
 
-		}
+	public void setTblSize(int size) throws IllegalArgumentException{
+		if (size<1) throw new IllegalArgumentException("invalid  table size");
+		this.tbl = new Shape[size];
 	}
 
-	public void setShapeOnPosition(Shape sh, int position) throws Exception {
+
+	public void setShapeOnPosition(Shape sh, int position) throws IllegalArgumentException {
 		if (position > this.tbl.length - 1 && position < 0) {
-			throw new Exception("invalid position");
+			throw new IllegalArgumentException("invalid position");
 		} else if (this.tbl[position] != null) {
-			throw new Exception("position not empty");
+			throw new IllegalArgumentException("position not empty");
 		} else {
 			this.tbl[position] = sh;
 		}
 	}
 
-	public void deleteShapeOnPosition(int position) throws Exception {
+	public void deleteShapeOnPosition(int position) throws IllegalArgumentException {
 		if (position > this.tbl.length - 1 && position < 0) {
-			throw new Exception("invalid position");
+			throw new IllegalArgumentException("invalid position");
 		} else {
 			this.tbl[position] = null;
 		}
 	}
-
 
 	public String getTableInfo() {
 		StringBuilder sp = new StringBuilder("");
