@@ -5,13 +5,7 @@ public class Triangle extends Shape {
 	private Point b = new Point();
 	private Point c = new Point();
 
-	public Triangle(Point a, Point b, Point c) {
-		super();
-		this.a = a;
-		this.b = b;
-		this.c = c;
-		testTriangle();
-	}
+
 
 	public Triangle() {
 		super();

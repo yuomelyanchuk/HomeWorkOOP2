@@ -10,13 +10,16 @@ public class Main {
 		double circleRadius = 5;
 		try {
 
-			Triangle tr = new Triangle(a, b, c);
+			Triangle tr = new Triangle();
+			tr.setTriangleCoordinates(a, b, c);
 			System.out.println(tr.getArea());
 
-			Circle cr = new Circle(a, circleRadius);
+			Circle cr = new Circle();
+			cr.setCenterRaius(a, circleRadius);
 			System.out.println(cr.getArea());
 
-			Square sq = new Square(a, b, c, d);
+			Square sq = new Square();
+			sq.setSquareCoordinates(a, b, c, d);
 			System.out.println(sq.getPerimetr());
 
 			Table tbl = new Table();

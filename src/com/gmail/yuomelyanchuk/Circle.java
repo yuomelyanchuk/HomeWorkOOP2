@@ -4,13 +4,6 @@ public class Circle extends Shape {
 	private Point centr = new Point();
 	private double radius;
 
-	public Circle(Point centr, double radius) {
-		super();
-		this.centr = centr;
-		this.radius = radius;
-		testCircle();
-
-	}
 
 	public Circle() {
 		super();
@@ -22,6 +15,11 @@ public class Circle extends Shape {
 	}
 
 	public void setRadius(double radius) {
+		this.radius = radius;
+		testCircle();
+	}
+	public void setCenterRaius(Point centr,double radius){
+		this.centr = centr;
 		this.radius = radius;
 		testCircle();
 	}
